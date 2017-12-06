@@ -19,7 +19,7 @@ function FindFirstRepeat(input)
 {
     var memoryState = input.split(/\s+/g).map(Number)
 
-    var knownStates = []
+    var knownStates = new Set()
     var cycles = 0
 
     while(true)
@@ -28,12 +28,12 @@ function FindFirstRepeat(input)
 
         cycles++
 
-        if (knownStates.indexOf(memoryState.join()) != -1)
+        if (knownStates.has(memoryState.join()))
         {
             break
         }        
 
-        knownStates.push(memoryState.join())
+        knownStates.add(memoryState.join())
     }
 
     return {Cycles: cycles, State: memoryState}
