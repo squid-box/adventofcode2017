@@ -78,4 +78,13 @@ var problemInput = require('..\\common\\utils.js').getInput(7)
 var actualTree = ParseInput(problemInput)
 var actualTreeRoot = FindRoot(actualTree)
 console.log("Root of the tree: " + actualTreeRoot)
-console.log("Total weight of tree: " + (CalculateWeight(actualTree, actualTreeRoot)))
+
+// Manual (bruteforce) solution to part 2, egbzge has balanced children, 
+// but needs to lose 7 to balance the rest of the tree.
+
+root = "egbzge"
+console.log(root + " weighs: " + actualTree[root].Weight)
+actualTree[root].Children.forEach(child =>
+{    
+    console.log(child + " weighs: " + (CalculateWeight(actualTree, child)))
+})
