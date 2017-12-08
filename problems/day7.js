@@ -6,7 +6,7 @@ function ParseInput(input)
     lines.forEach(line => 
     {
         var tmp = line.split(' ')
-        var node = {Name: tmp[0], Weight: Number(tmp[1].slice(1, -1))}
+        var node = {Name: tmp[0], Weight: Number(tmp[1].trim().slice(1, -1))}
         
         if (tmp[2] != undefined)
         {
