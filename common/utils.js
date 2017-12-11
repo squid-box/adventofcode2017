@@ -6,3 +6,21 @@ exports.getInput = function (day)
     
     return input.trim()
 }
+
+exports.compArray = function (one, two)
+{
+    if (one.length != two.length)
+    {
+        return false
+    }
+
+    for(var i = 0; i < one.length; i++)
+    {
+        if (one[i] != two[i])
+        {
+            return false
+        }
+    }
+
+    return true
+}
