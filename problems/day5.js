@@ -1,4 +1,4 @@
-var problemInput = require('..\\common\\utils.js').getInput(5)
+var problemInput = require('..\\common\\utils.js').GetInput(5)
 
 function FindStepsOutsideListPt1(input)
 {

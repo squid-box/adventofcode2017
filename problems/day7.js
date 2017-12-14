@@ -74,7 +74,7 @@ console.log("Test case 1: " + (testTreeRoot == "tknk"))
 console.log("Test case 2.1: " + (CalculateWeight(testTree, testTreeRoot) == 778))
 console.log("Test case 2.2: " + (CalculateWeight(testTree, "fwft") == 243))
 
-var problemInput = require('..\\common\\utils.js').getInput(7)
+var problemInput = require('..\\common\\utils.js').GetInput(7)
 var actualTree = ParseInput(problemInput)
 var actualTreeRoot = FindRoot(actualTree)
 console.log("Root of the tree: " + actualTreeRoot)

@@ -103,7 +103,7 @@ var testInstructions = ParseInstructions(testData)
 var testResults = ExecuteInstructions(testInstructions)
 console.log("Test case 1: " + (FindMaxValueInRegisters(testResults) == 1))
 
-var problemInput = require('..\\common\\utils.js').getInput(8)
+var problemInput = require('..\\common\\utils.js').GetInput(8)
 var instructions = ParseInstructions(problemInput)
 var results = ExecuteInstructions(instructions)
 console.log("Maximum value in registers is: " + FindMaxValueInRegisters(results.Registers))

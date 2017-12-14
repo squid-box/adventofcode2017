@@ -29,7 +29,7 @@ console.log("Test case 2.4: " + (Solve("123123", 6/2) == 12))
 console.log("Test case 2.5: " + (Solve("12131415", 8/2) == 4))
 console.log('\n')
 
-problemInput = require('..\\common\\utils.js').getInput(1)
+problemInput = require('..\\common\\utils.js').GetInput(1)
 
 console.log("Part 1: " + (Solve(problemInput,1)))
 console.log("Part 2: " + (Solve(problemInput,problemInput.length/2)))

@@ -1,4 +1,4 @@
-problemInput = require('..\\common\\utils.js').getInput(9)
+problemInput = require('..\\common\\utils.js').GetInput(9)
 
 function CountPoints(input)
 {

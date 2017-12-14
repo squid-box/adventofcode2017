@@ -112,5 +112,5 @@ function CalculateSeverity(input)
 var testData = "0: 3\n1: 2\n4: 4\n6: 4\n"
 console.log("Test case 1: " + (CalculateSeverity(testData) == 24))
 
-var problemInput = require('..\\common\\utils.js').getInput(13)
+var problemInput = require('..\\common\\utils.js').GetInput(13)
 console.log("Severity is: " + CalculateSeverity(problemInput))

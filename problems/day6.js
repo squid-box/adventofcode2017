@@ -79,7 +79,7 @@ var testFirstRun = FindFirstRepeat(testData)
 console.log("Test case 1: " + (testFirstRun.Cycles == 5))
 console.log("Test case 2: " + (FindNextRepeat(testFirstRun.State) == 4))
 
-var problemInput = require('..\\common\\utils.js').getInput(6)
+var problemInput = require('..\\common\\utils.js').GetInput(6)
 var partOne = FindFirstRepeat(problemInput)
 console.log("First repeat occurs after " + partOne.Cycles + " cycles.")
 console.log("Same sequence occurs every " + FindNextRepeat(partOne.State) + " cycles.")

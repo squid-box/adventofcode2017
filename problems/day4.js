@@ -1,4 +1,4 @@
-var problemInput = require('..\\common\\utils.js').getInput(4)
+var problemInput = require('..\\common\\utils.js').GetInput(4)
 
 function CountValidPhrases(input)
 {

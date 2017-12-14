@@ -53,6 +53,6 @@ console.log("Test case 1: " + (calculateChecksum(testData1, true) == 18))
 var testData2 = "5 9 2 8" + '\n' + "9 4 7 3" + '\n' + "3 8 6 5"
 console.log("Test case 2: " + (calculateChecksum(testData2, false) == 9))
 
-problemInput = require('..\\common\\utils.js').getInput(2)
+problemInput = require('..\\common\\utils.js').GetInput(2)
 console.log("Checksum pt1: " + calculateChecksum(problemInput, true))
 console.log("Checksum pt2: " + calculateChecksum(problemInput, false))

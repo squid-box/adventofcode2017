@@ -127,6 +127,6 @@ console.log("Test case 2: " + (FindStepsToOrigin(FindFinalPosition("ne,ne,sw,sw"
 console.log("Test case 3: " + (FindStepsToOrigin(FindFinalPosition("ne,ne,s,s")) == 2))
 console.log("Test case 4: " + (FindStepsToOrigin(FindFinalPosition("se,sw,se,sw,sw")) == 3))
 
-problemInput = require('..\\common\\utils.js').getInput(11)
+problemInput = require('..\\common\\utils.js').GetInput(11)
 console.log("Child is " + FindStepsToOrigin(FindFinalPosition(problemInput)) + " steps away.")
 console.log("Child was at most " + FindFurthestPoint(problemInput) + " steps away.")

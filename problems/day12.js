@@ -97,5 +97,5 @@ var testInput = "0 <-> 2\n1 <-> 1\n2 <-> 0, 3, 4\n3 <-> 2, 4\n4 <-> 2, 3, 6\n5 <
 console.log("Test case 1: " + (FindProgramsConnectedTo(0, CreateAdjacencyList(testInput)).size == 6))
 console.log("Test case 2: " + (CountGroups(CreateAdjacencyList(testInput)) == 2))
 
-console.log(FindProgramsConnectedTo(0, CreateAdjacencyList(require('..\\common\\utils.js').getInput(12))).size + " programs connected to 0.")
-console.log("List contains " + CountGroups(CreateAdjacencyList(require('..\\common\\utils.js').getInput(12))) + " groups.")
+console.log(FindProgramsConnectedTo(0, CreateAdjacencyList(require('..\\common\\utils.js').GetInput(12))).size + " programs connected to 0.")
+console.log("List contains " + CountGroups(CreateAdjacencyList(require('..\\common\\utils.js').GetInput(12))) + " groups.")
