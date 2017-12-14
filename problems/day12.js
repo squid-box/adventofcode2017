@@ -1,14 +1,12 @@
+var utils = require('..\\common\\utils.js')
+var set = require('..\\common\\set.js')
+
 function CreateAdjacencyList(input)
 {
     var adjacencyList = {}
 
     input.split(/\n+/).forEach(line => 
     {
-        if (line == "")
-        {
-            return
-        }
-
         var parts = line.trim().split(" <-> ")
         var currentNode = Number(parts[0])
 
@@ -66,36 +64,24 @@ function CountGroups(adjacencyList)
 
     for(var i = 0; i < Object.keys(adjacencyList).length; i++)
     {
-        if (visitedNodes.has[i])
-        {
-            continue
-        }
-
         var connectedNodes = FindProgramsConnectedTo(i, adjacencyList)
-
-        var diff = new Set()
-        for(var x of connectedNodes) 
-        {
-            if(!visitedNodes.has(x)) diff.add(x);
-        }
+        var diff = set.Difference(connectedNodes, visitedNodes)
 
         if (diff.size != 0)
         {
             groups++
         }
 
-        connectedNodes.forEach(node =>
-        {
-            visitedNodes.add(node)
-        })
+        visitedNodes = set.Union(visitedNodes, connectedNodes)
     }
 
     return groups
 }
 
-var testInput = "0 <-> 2\n1 <-> 1\n2 <-> 0, 3, 4\n3 <-> 2, 4\n4 <-> 2, 3, 6\n5 <-> 6\n6 <-> 4, 5\n"
+var testInput = "0 <-> 2\n1 <-> 1\n2 <-> 0, 3, 4\n3 <-> 2, 4\n4 <-> 2, 3, 6\n5 <-> 6\n6 <-> 4, 5"
 console.log("Test case 1: " + (FindProgramsConnectedTo(0, CreateAdjacencyList(testInput)).size == 6))
 console.log("Test case 2: " + (CountGroups(CreateAdjacencyList(testInput)) == 2))
 
-console.log(FindProgramsConnectedTo(0, CreateAdjacencyList(require('..\\common\\utils.js').GetInput(12))).size + " programs connected to 0.")
-console.log("List contains " + CountGroups(CreateAdjacencyList(require('..\\common\\utils.js').GetInput(12))) + " groups.")
+var problemInput = utils.GetInput(12)
+console.log(FindProgramsConnectedTo(0, CreateAdjacencyList(problemInput)).size + " programs connected to 0.")
+console.log("List contains " + CountGroups(CreateAdjacencyList(problemInput)) + " groups.")

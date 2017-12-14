@@ -1,5 +1,3 @@
-// Utilities that can be used for most problems
-
 exports.GetInput = function (day) 
 {
     var input = require('fs').readFileSync(__dirname + "\\..\\input\\" + day + ".txt", 'utf8')
@@ -25,7 +23,7 @@ exports.CompareArrays = function (one, two)
     return true
 }
 
-exports.MakeZeroArray = function (length)
+exports.MakeIncrementalArray = function (length)
 {
     var array = []
 

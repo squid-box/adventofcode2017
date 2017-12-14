@@ -32,4 +32,4 @@ function ConvertLineToBits(line)
 }
 
 console.log("Test case 1: " + (CountUsedSquares("flqrgnkx") == 8108))
-console.log("Used squares: " + CountUsedSquares(utils.GetInput(10)))
+console.log("Used squares: " + CountUsedSquares("uugsqrei"))

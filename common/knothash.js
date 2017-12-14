@@ -49,7 +49,7 @@ exports.ConvertInputToAscii = function (input)
 exports.GenerateKnotHash = function (input)
 {
     var ascii = this.ConvertInputToAscii(input)
-    var list = utils.MakeZeroArray(256)
+    var list = utils.MakeIncrementalArray(256)
 
     var currentPos = 0
     var skipSize = 0
