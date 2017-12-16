@@ -59,7 +59,33 @@ function Partner(a, b, array)
     return Exchange(aIndex, bIndex, array)
 }
 
+function FindRepeatingIndex(initialOrder, operations)
+{
+    var newList = initialOrder.slice()
+
+    for (var i = 0; i < 1000000000; i++)
+    {
+        newList = ExecuteOperations(newList, operations)
+    
+        if (utils.CompareArrays(newList, initialOrder))
+        {
+            return i  
+        }
+    }
+
+    return -1
+}
+
 console.log("Test case 1: " + (utils.CompareArrays(ExecuteOperations(CreateList(5), "s1,x3/4,pe/b"), ['b','a','e','d','c'])))
 
 var part1 = ExecuteOperations(CreateList(16), utils.GetInput(16))
-console.log("Resulting order: " + part1.join(""))
+console.log("Order after one dance: " + part1.join(""))
+
+var repeatModulo = FindRepeatingIndex(part1, utils.GetInput(16))
+
+for (var i = 1; i < 1000000000 % repeatModulo; i++)
+{
+    part1 = ExecuteOperations(part1, utils.GetInput(16))
+}
+
+console.log("Order after one billion dances: " + part1.join(""))
